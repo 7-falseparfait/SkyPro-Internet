@@ -1,0 +1,145 @@
+/* Import Google Fonts */
+@import url("https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@300,500,700,400,800,900&display=swap");
+
+/* Import Tailwind */
+@import "tailwindcss";
+
+
+
+/* ======= Tailwind Theme Config (v4 CSS-first) ======= */
+@theme {
+  /* === Colors === */
+  --color-gray-border: #DBE1E7;
+  --color-trademark: rgba(163, 140, 255, 0.88);
+  --color-testimonnialText: rgba(18, 18, 18, 1);
+  --color-tagBorder: rgba(23, 125, 189, 0.3);
+  --color-footerBg: rgba(0, 17, 45, 0.98);
+  --color-tagBg: #DCEBFE;
+  --color-primary: #177DBD; /* Skypro primary blue */
+  --color-sectionBg: #DCEBFE; /* Section background */
+  --color-textPrimary: #656565; /* Main text color */
+  --color-footerLink: #7B889D; /* Footer link color */
+  --color-getStartedText: #F9F9FB; /* Get Started section text */
+  --color-blackText: #121212; /* Testimonial card text */
+
+  /* === Fonts === */
+  --font-cabinet: 'Cabinet Grotesk';
+
+  /* === Breakpoints (sync with Tailwind defaults) === */
+  --screen-sm: theme(screens.sm);
+  --screen-md: theme(screens.md);
+  --screen-lg: theme(screens.lg);
+  --screen-xl: theme(screens.xl);
+  --screen-2xl: theme(screens.2xl);
+
+  /* === Spacing === */
+  --container-padding: 1.25rem; /* 20px ~ px-5 */
+  --container-padding-md: 4rem; /* 64px ~ px-16 */
+
+  /* === Border radius === */
+  --rounded-default: 0.5rem;
+}
+
+/* ======= Global Styles ======= */
+/* Body / HTML */
+html, body {
+  font-family: var(--font-cabinet);
+  color: var(--color-textPrimary);
+  overflow-x: hidden;
+  font-weight: 400;
+  font-size: 16px
+}
+
+/* Typography */
+p {
+  @apply leading-[150%];
+  @apply lg:text-[1.125rem];
+}
+.test{
+  border: 2px solid red
+}
+h1 {
+  @apply text-4xl font-black leading-[3.25rem];
+  @apply lg:text-6xl lg:leading-[4rem];
+  color: var(--color-blackText);
+}
+
+h2 {
+  @apply font-[800] leading-snug;
+  @apply lg:text-4xl;
+
+}
+
+h3 {
+  @apply font-[700] leading-snug;
+  @apply lg:text-[1.1rem];
+}
+
+/* Responsive Typography */
+@media (min-width: var(--screen-md)) {
+  p {
+    @apply text-[1rem] leading-8;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+/* Custom Utilities */
+@layer components {
+  .container-padding {
+    @apply px-5 lg:px-16;
+  }
+  .section-spacing {
+    @apply py-4;
+    @apply md:py-16;
+    @apply lg:py-24;
+  }
+  .bg-primary {
+    @apply bg-[var(--color-primary)];
+  }
+  .text-primary {
+    @apply text-[var(--color-primary)];
+  }
+  .bg-sectionBg {
+    @apply bg-[var(--color-sectionBg)];
+  }
+  .text-textPrimary {
+    @apply text-[var(--color-textPrimary)];
+  }
+  .text-footerLink {
+    @apply text-[var(--color-footerLink)];
+  }
+  .text-getStartedText {
+    @apply text-[var(--color-getStartedText)];
+  }
+  .text-testimonialText {
+    @apply text-[var(--color-testimonialText)];
+  }
+  .font-cabinet {
+    @apply font-[var(--font-sans)];
+  }
+}
+.customers{
+  background-image: url(./assets/Softlight.webp);
+  background-size: cover;   
+   background-color: rgba(6, 65, 124, 0.89);   
+  background-position: center;   
+  background-repeat: no-repeat;  
+  border-radius: 1rem;
+}
+.get-started {
+    background-image: url(./assets/getStartedPattern.webp);
+  background-size: cover; 
+  border: 2px solid transparent;  
+   background-color: var(--color-primary);   
+  background-position: center;   
+  background-repeat: no-repeat;  
+}
+
+
+
+
