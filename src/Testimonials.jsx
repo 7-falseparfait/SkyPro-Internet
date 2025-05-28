@@ -45,7 +45,7 @@ export function Testimonials() {
   return (
     <section className="testimonials mb-3">
       <Tags
-        className="place-self-center"
+        className="mx-auto"
         icon={
           <img
             src={star}

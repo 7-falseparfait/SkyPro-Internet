@@ -12,7 +12,7 @@ export function GetStarted() {
           Join thousands of satisfied customers across Nigeria today.
         </p>
       </div>
-      <div className="place-self-center mt-6">
+      <div className="grid place-items-center mt-6">
         {" "}
         <Button className="font-[500]" variant="subscribe">
           Subscribe Now

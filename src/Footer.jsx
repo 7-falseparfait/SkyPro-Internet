@@ -43,7 +43,7 @@ export function Footer() {
               </a>
             ))}
           </div>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 mr-10">
             <p className="text-[1.2rem] text-white mb-2">Company</p>
             {footerLinks.slice(4, 7).map((item, i) => (
               <a
@@ -59,7 +59,7 @@ export function Footer() {
         <div className="mt-7">
           <p className="text-[1.2rem] text-white mb-2">Contact Us</p>
           {contact.map((item, i) => (
-            <p className="text-footerLink font-[500]" key={i}>
+            <p className="text-footerLink font-[500] mb-2" key={i}>
               {i !== contact.length - 1 ? (
                 <>
                   {item.title}: <span className="underline">{item.id}</span>
