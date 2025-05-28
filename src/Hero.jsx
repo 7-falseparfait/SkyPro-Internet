@@ -3,7 +3,7 @@ import { Button } from "./Button";
 export function Hero() {
   return (
     <section className=" py-3 text-center section-spacing container-padding">
-      <h1 className="uppercase leading-snug text-center">
+      <h1 className="uppercase leading-snug text-center mt-2">
         <span className="whitespace-nowrap">
           <span className="text-primary">Fast</span>&nbsp;and&nbsp;
           <span className="text-primary">Reliable</span>
