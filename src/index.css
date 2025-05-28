@@ -59,7 +59,7 @@ p {
   border: 2px solid red
 }
 h1 {
-  @apply text-[2rem] font-black leading-[3.1rem];
+  @apply text-[2.1rem] font-black leading-[3.1rem];
   @apply lg:text-6xl lg:leading-[4rem];
   color: var(--color-blackText);
 }
