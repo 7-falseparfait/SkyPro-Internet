@@ -5,7 +5,7 @@ export function Button({
   ...rest
 }) {
   const baseStyles = `
-      px-8 py-[0.8rem]  cursor-pointer 
+      px-8 py-[0.8rem]  cursor-pointer font-dm-sans font-[500]
    `;
 
   const variants = {
