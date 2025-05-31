@@ -1,5 +1,5 @@
-import { Tags } from "./Tags";
-import { PricingCard } from "./PricingCard";
+import { Tags } from "/src/components/Tags";
+import { PricingCard } from "/src/components/PricingCard";
 import star from "/src/assets/star.png";
 export function Pricing() {
   const pricingPlans = [
@@ -60,7 +60,7 @@ export function Pricing() {
           <h2 className="mt-6 text-blackText text-2xl">
             Trusted by Leading Companies
           </h2>
-          <p className="mt-3 text-[0.9rem] max-w-md mx-auto">
+          <p className="mt-3 text-[1rem] mx-auto">
             Whether you're a small household or a large business, we have a plan
             that's right for you.
           </p>

@@ -18,7 +18,7 @@ export function PricingCard({
     <div
       className={` ${
         highlight ? "bg-primary text-white" : "bg-tagBg"
-      }  px-6 mt-10 py-8 rounded-3xl ${className}`}
+      }  px-10 mt-10 py-9 rounded-3xl ${className}`}
     >
       <h2
         className={`${highlight ? "text-white" : "text-blackText"} custom-h2`}

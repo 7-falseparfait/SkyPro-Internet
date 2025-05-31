@@ -1,25 +1,28 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Hero } from "./Hero";
-import { Pricing } from "./Pricing";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import { Partners } from "./Partners";
-import { Testimonials } from "./Testimonials";
-import { GetStarted } from "./GetStarted";
+import { Hero } from "./pages/Hero";
+import { Pricing } from "./pages/Pricing";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Partners } from "./components/Partners";
+import { Testimonials } from "./components/Testimonials";
+import { GetStarted } from "./components/GetStarted";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={
-          <>
-            <Hero />
-            <Partners />
-            <Testimonials />
-            <GetStarted />
-          </>
-        } />
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <Partners />
+              <Testimonials />
+              <GetStarted />
+            </>
+          }
+        />
         <Route path="/pricing" element={<Pricing />} />
       </Routes>
       <Footer />
