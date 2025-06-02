@@ -61,12 +61,13 @@ export function Modal({ open, onClose, children, className = "" }) {
         >
           <div
             className={`
-        pointer-events-auto
-        bg-white w-full sm:max-w-md mt-10 shadow-lg relative
-        transition-all duration-300 ease-out
-        flex flex-col
-        ${exiting ? "animate-modal-out" : "animate-modal-in"}
-      `}
+      pointer-events-auto
+      bg-white w-full mt-10 sm:max-w-md shadow-lg relative
+      transition-all duration-300 ease-out
+      flex flex-col
+      max-h-[100dvh] overflow-y-auto
+      ${exiting ? "animate-modal-out" : "animate-modal-in"}
+    `}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="sticky top-0 z-10 bg-white flex justify-end p-4">
