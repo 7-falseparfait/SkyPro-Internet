@@ -43,7 +43,7 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="testimonials mb-3">
+    <section className="testimonials mb-3 lg:max-w-[1440px] lg:mx-auto">
       <Tags
         className="mx-auto"
         icon={
@@ -66,7 +66,7 @@ export function Testimonials() {
         </p>
       </div>
 
-      <div className="py-3">
+      <div className="py-3 lg:hidden">
         <Swiper
           modules={[Autoplay]}
           autoplay={{ delay: 5000 }}
@@ -74,20 +74,46 @@ export function Testimonials() {
           slidesPerView={1.4}
           loop={true}
           centeredSlides={true}
-          className="w-full"
+          className="w-full h-[14rem]"
         >
-          <div className="flex">
-            {fullList.map((item, index) => (
-              <SwiperSlide key={item.id + index}>
-                {item.type === "intro" ? (
-                  <IntroCard />
-                ) : (
-                  <TestimonyCard data={item} />
-                )}
-              </SwiperSlide>
-            ))}
-          </div>
+          {fullList.map((item, index) => (
+            <SwiperSlide
+              key={item.id + index}
+              className="h-full flex items-stretch"
+            >
+              {item.type === "intro" ? (
+                <IntroCard />
+              ) : (
+                <TestimonyCard data={item} />
+              )}
+            </SwiperSlide>
+          ))}
         </Swiper>
+      </div>
+      <div className="hidden lg:grid grid-cols-3 grid-rows-3 gap-6 px-4 pb-57">
+        {/* First column: Intro card spans all rows */}
+        <div className="row-span-3">
+          <IntroCard />
+        </div>
+        {/* Second column: Each testimony in its own row */}
+        <div className="row-start-1 col-start-2">
+          <TestimonyCard data={fullList[1]} />
+        </div>
+        <div className="row-start-2 col-start-2">
+          <TestimonyCard data={fullList[2]} />
+        </div>
+        <div className="row-start-3 col-start-2">
+          <TestimonyCard data={fullList[3]} />
+        </div>
+        {/* Third column: Two testimonies, equal height */}
+        <div className="row-span-3 col-start-3 flex flex-col h-full">
+          <div className="flex-1 flex">
+            <TestimonyCard data={fullList[4]} />
+          </div>
+          <div className="flex-1 flex mt-6">
+            <TestimonyCard data={fullList[5]} />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -10,6 +10,7 @@
 /* ======= Tailwind Theme Config (v4 CSS-first) ======= */
 @theme {
   /* === Colors === */
+  --color-price: #F0F4FF;
   --color-gray-border: #DBE1E7;
   --color-trademark: rgba(163, 140, 255, 0.88);
   --color-testimonnialText: rgba(18, 18, 18, 1);
@@ -36,8 +37,7 @@
   --screen-2xl: theme(screens.2xl);
 
   /* === Spacing === */
-  --container-padding: 1.25rem; /* 20px ~ px-5 */
-  --container-padding-md: 4rem; /* 64px ~ px-16 */
+  --container-padding: 1.25rem;
 
   /* === Border radius === */
   --rounded-default: 0.5rem;
@@ -63,7 +63,7 @@ p {
 }
 h1 {
   @apply text-[2.1rem] font-black leading-[3.1rem];
-  @apply lg:text-6xl lg:leading-[4rem];
+  @apply lg:text-[5.1rem] lg:leading-[5rem];
   /* color: var(--color-blackText); */
 }
 
@@ -75,7 +75,7 @@ h2 {
 
 h3 {
   @apply font-[700] leading-snug;
-  @apply lg:text-[1.1rem];
+  @apply lg:text-[3rem];
 }
 
 /* Responsive Typography */
@@ -124,8 +124,7 @@ h3 {
   }
   .section-spacing {
     @apply py-4;
-    @apply md:py-16;
-    @apply lg:py-24;
+    @apply md:py-10;
   }
   .bg-primary {
     @apply bg-[var(--color-primary)];
@@ -184,6 +183,9 @@ h3 {
 }
 .font-dm-sans{
   font-family: var(--font-dm-sans);
+}
+.text-very-black{
+  color: var(--color-blackText);
 }
 
 

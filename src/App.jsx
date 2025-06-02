@@ -23,7 +23,16 @@ function App() {
             </>
           }
         />
-        <Route path="/pricing" element={<Pricing />} />
+        <Route
+          path="/pricing"
+          element={
+            <>
+              {" "}
+              <Pricing />
+              <GetStarted />{" "}
+            </>
+          }
+        />
       </Routes>
       <Footer />
     </BrowserRouter>
