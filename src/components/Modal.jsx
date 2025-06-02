@@ -4,13 +4,19 @@ import cancel from "/src/assets/cancel.png";
 
 export function Modal({ open, onClose, children, className = "" }) {
   const modalRef = useRef();
+  const contentRef = useRef();
   const [show, setShow] = useState(open);
   const [exiting, setExiting] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (open) {
       setShow(true);
       setExiting(false);
+      setScrolled(false);
+      if (contentRef.current) {
+        contentRef.current.scrollTop = 0;
+      }
     } else if (show) {
       setExiting(true);
       const timeout = setTimeout(() => {
@@ -41,11 +47,23 @@ export function Modal({ open, onClose, children, className = "" }) {
     }
   }, [show]);
 
+  useEffect(() => {
+    const contentElement = contentRef.current;
+    if (!contentElement) return;
+
+    const handleScroll = () => {
+      setScrolled(contentElement.scrollTop > 5);
+    };
+
+    contentElement.addEventListener("scroll", handleScroll);
+    return () => contentElement.removeEventListener("scroll", handleScroll);
+  }, [show]);
+
   return (
     <>
       {open && (
         <section
-          className={`fixed inset-0  z-50 bg-black/40 backdrop-blur-sm flex justify-center items-start ${className}`}
+          className={`fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex justify-center items-start ${className}`}
           onClick={onClose}
         />
       )}
@@ -57,31 +75,33 @@ export function Modal({ open, onClose, children, className = "" }) {
           onClick={onClose}
         >
           <div
+            ref={contentRef}
             className={`
-        pointer-events-auto
-        bg-white w-full sm:max-w-md shadow-lg relative
-        transition-all duration-300 ease-out
-        flex flex-col
-        overflow-y-auto
-        mt-10
-        ${exiting ? "animate-modal-out" : "animate-modal-in"}
-      `}
-            style={{ maxHeight: "calc(100dvh - 2.5rem)" }} // 2.5rem ≈ mt-10
+              pointer-events-auto pb-50
+              bg-white w-full sm:max-w-md shadow-lg relative
+              transition-all duration-300 ease-out
+              flex flex-col
+              overflow-y-auto
+              ${exiting ? "animate-modal-out" : "animate-modal-in"}
+              ${scrolled ? "mt-0 rounded-none" : "mt-[5vh]"}
+            `}
+            style={{
+              height: "100vh", // Always full height
+              transform: scrolled ? "translateY(0)" : "translateY(10vh)",
+              transition: "transform 0.3s ease-out, 0.3s ease-out",
+            }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sticky top-0 z-10 bg-white flex justify-end p-4">
+            <div className={`sticky top-0 z-10 bg-white flex justify-end p-4`}>
               <button
                 className="
-        flex items-center justify-center
-        w-7 h-7
-        rounded-full
-        bg-gray-100
-        hover:bg-gray-200
-        hover:cursor-pointer
-        border
-        border-gray-300
-        transition
-      "
+                  flex items-center justify-center
+                  w-7 h-7
+                  rounded-full
+                  bg-gray-100
+                  hover:bg-gray-200
+                  hover:cursor-pointer
+                "
                 onClick={onClose}
                 aria-label="Close"
               >
@@ -97,7 +117,7 @@ export function Modal({ open, onClose, children, className = "" }) {
                 style={{ objectFit: "cover" }}
               />
             </div>
-            <div className="p-6 flex-1 flex flex-col mb-13">{children}</div>
+            <div className="p-6 flex-1 flex flex-col">{children}</div>
           </div>
         </div>
       )}

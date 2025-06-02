@@ -11,6 +11,7 @@ export function Header() {
     <header className="flex mx-5 py-2 justify-between items-center lg:max-w-[1440px] lg:mx-auto lg:py-6">
       {/* <img className="w-[10rem] test" src={skyProLogo} alt="skyPro" /> */}
       <p>LOGO</p>
+      {/* come back */}
       <img className="lg:hidden" src={harmbuger} alt="menu" />
       <div className="hidden lg:flex gap-4">
         {navLink.map((item, i) => (
