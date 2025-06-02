@@ -32,7 +32,7 @@ export function Hero() {
   const baseIconClass = `w-13 absolute transition-all duration-800 ease-out hidden md:hidden lg:block`;
 
   return (
-    <section className="py-3 text-center section-spacing container-padding lg:py-23 lg:place-self-center lg:relative max-w-[1500px] mx-auto">
+    <section className="py-3 text-center section-spacing container-padding lg:py-23 lg:place-self-center lg:relative max-w-[1440px] mx-auto">
       <Tags
         className="w-fit mx-auto px-2 mb-6"
         icon={

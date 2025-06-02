@@ -45,7 +45,7 @@ export function Modal({ open, onClose, children, className = "" }) {
     <>
       {open && (
         <section
-          className={`fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex justify-center items-start ${className}`}
+          className={`fixed inset-0  z-50 bg-black/40 backdrop-blur-sm flex justify-center items-start ${className}`}
           onClick={onClose}
         />
       )}
@@ -53,21 +53,20 @@ export function Modal({ open, onClose, children, className = "" }) {
         <div
           ref={modalRef}
           tabIndex={-1}
-          className={`
-      fixed inset-0 z-50 flex justify-center items-start pointer-events-none
-      overflow-y-auto
-    `}
-          style={{ maxHeight: "100dvh" }}
+          className="fixed inset-0 z-50 flex justify-center items-start pointer-events-none"
+          onClick={onClose}
         >
           <div
             className={`
-      pointer-events-auto
-      bg-white w-full mt-10 sm:max-w-md shadow-lg relative
-      transition-all duration-300 ease-out
-      flex flex-col
-      max-h-[100dvh] overflow-y-auto
-      ${exiting ? "animate-modal-out" : "animate-modal-in"}
-    `}
+        pointer-events-auto
+        bg-white w-full sm:max-w-md shadow-lg relative
+        transition-all duration-300 ease-out
+        flex flex-col
+        overflow-y-auto
+        mt-10
+        ${exiting ? "animate-modal-out" : "animate-modal-in"}
+      `}
+            style={{ maxHeight: "calc(100dvh - 2.5rem)" }} // 2.5rem ≈ mt-10
             onClick={(e) => e.stopPropagation()}
           >
             <div className="sticky top-0 z-10 bg-white flex justify-end p-4">
@@ -89,11 +88,13 @@ export function Modal({ open, onClose, children, className = "" }) {
                 <img src={cancel} alt="Close" className="w-4 h-4" />
               </button>
             </div>
-            <div>
+            <div className="w-full flex justify-center items-center min-h-[17rem]">
               <img
                 src={modalImg}
                 alt="modal background"
-                className="w-full py-5 mt-8"
+                className="py-3 h-full"
+                loading="lazy"
+                style={{ objectFit: "cover" }}
               />
             </div>
             <div className="p-6 flex-1 flex flex-col mb-13">{children}</div>
