@@ -19,6 +19,7 @@ import contactIcon from '../assets/contactIcon.png';
 import speedIcon from '../assets/speedIcon.png';
 import wifiIcon from '../assets/wifiIcon.png';
 
+// ...existing imports...
 export function Hero() {
   const navigate = useNavigate();
   const [showModal, setModal] = useState(false);
@@ -28,8 +29,7 @@ export function Hero() {
     setAnimateIcons(true);
   }, []);
 
-  // Reusable styles
-  const baseIconClass = `w-13 absolute transition-all duration-800 ease-out hidden md:hidden lg:block`;
+  const baseIconClass = `lg:w-11 xl:w-13 absolute transition-all duration-800 ease-out hidden lg:block`;
 
   return (
     <section className="py-3 text-center lg:py-18 lg:place-self-center lg:relative w-full">
@@ -42,9 +42,7 @@ export function Hero() {
         >
           Trusted By 10,000+ Customers <img className="w-4 h-4" src={arrow} alt="arrow-icon" />
         </Tags>
-
         <HeroHeading />
-
         <p className="font-normal mt-2 lg:py-5">
           Enjoy unlimited, high-speed wireless internet with seamless
           <span className="hidden lg:inline">
@@ -52,7 +50,6 @@ export function Hero() {
           </span>
           coverage across Nigeria — no cables, no hassle.
         </p>
-
         <div className="mt-6 flex flex-col items-center gap-5 lg:flex-row lg:justify-center lg:mb-6">
           <Button className="lg:w-[17rem]" onClick={() => navigate('/pricing')}>
             Get Started
@@ -61,100 +58,99 @@ export function Hero() {
             Learn More
           </Button>
         </div>
-
-        {/* Animated Icons */}
+        {/* Left side icons */}
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[130px] opacity-100' : 'bottom-0 opacity-0'}
-          left-[380px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[30%] opacity-100' : 'bottom-0 opacity-0'}
+    lg:left-[20%] xl:left-[25%] 
+  `}
           src={mobileIcon}
           alt=""
         />
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[165px] opacity-100' : 'bottom-0 opacity-0'}
-          left-[140px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[34%] opacity-100' : 'bottom-0 opacity-0'}
+    left-[8%] xl:left-[10%]
+  `}
           src={signalIcon}
           alt=""
         />
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[250px] opacity-100' : 'bottom-0 opacity-0'}
-          left-[230px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[54%] opacity-100' : 'bottom-0 opacity-0'}
+    left-[13%] xl:left-[18%]
+  `}
           src={laptopIcon}
           alt=""
         />
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[330px] opacity-100' : 'bottom-0 opacity-0'}
-          left-[70px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[64%] opacity-100' : 'bottom-0 opacity-0'}
+    lg:left-[5%] xl:left-[8%]
+  `}
           src={webIcon}
           alt=""
         />
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[400px] opacity-100' : 'bottom-0 opacity-0'}
-          left-[270px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[85%] opacity-100' : 'bottom-0 opacity-0'}
+    left-[14%] xl:left-[19%]
+  `}
           src={mediaIcon}
           alt=""
         />
-        {/* Right */}
+
+        {/* Right side icons */}
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[130px] opacity-100' : 'bottom-0 opacity-0'}
-          right-[400px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[30%] opacity-100' : 'bottom-0 opacity-0'}
+    lg:right-[24%] xl:right-[25%]
+  `}
           src={wifiIcon}
           alt=""
         />
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[180px] opacity-100' : 'bottom-0 opacity-0'}
-          right-[80px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[34%] opacity-100' : 'bottom-0 opacity-0'}
+    right-[6%] xl:right-[10%]
+  `}
           src={contactIcon}
           alt=""
         />
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[235px] opacity-100' : 'bottom-0 opacity-0'}
-          right-[230px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[54%] opacity-100' : 'bottom-0 opacity-0'}
+    right-[12%] xl:right-[18%]
+  `}
           src={gameIcon}
           alt=""
         />
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[380px] opacity-100' : 'bottom-0 opacity-0'}
-          right-[60px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[64%] opacity-100' : 'bottom-0 opacity-0'}
+    lg:right-[3%] xl:right-[8%]
+  `}
           src={homeIcon}
           alt=""
         />
         <img
           className={`
-          ${baseIconClass}
-          ${animateIcons ? 'bottom-[410px] opacity-100' : 'bottom-0 opacity-0'}
-          right-[270px]
-        `}
+    ${baseIconClass}
+    ${animateIcons ? 'bottom-[85%] opacity-100' : 'bottom-0 opacity-0'}
+    right-[14%] xl:right-[19%]
+  `}
           src={speedIcon}
           alt=""
         />
-        {/* Modal */}
         <Modal className="mx-0" open={showModal} onClose={() => setModal(false)}>
           <h2 className="text-xl font-black mb-4 text-left text-very-black">
             GETTING STARTED WITH SKYPRO

@@ -50,28 +50,31 @@ export function Footer() {
                 ))}
               </div>
             </div>
-            <div className="mt-7 mb-8 lg:mt-0 lg:mb-0">
-              <p className="text-[1.2rem] text-white mb-2">Contact Us</p>
+            <div className="mt-7 mb-8 lg:mt-0 lg:mb-0 flex-col flex">
+              <p className="text-[1.2rem] text-white font-[500] mb-2">Contact Us</p>
               {contact.map((item, i) => (
-                <p className="text-footerLink font-[500] mb-2" key={i}>
+                <span className="text-footerLink mb-2" key={i}>
                   {i !== contact.length - 1 ? (
                     <>
-                      {item.title}: <span className="underline">{item.id}</span>
+                      {item.title}:{' '}
+                      <a href="#" className="underline">
+                        {item.id}
+                      </a>
                     </>
                   ) : (
                     <span>{item.id}</span>
                   )}
-                </p>
+                </span>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="border-t-gray-50 border-t-1 lg:flex justify-between">
+        <div className="border-t-gray-50 border-t-1 lg:flex justify-between lg:pt-4">
           <p className="text-trademark place-self-center mt-3">
             © SkyPro Copyright 2024. All Rights Reserved.
           </p>
-          <div className="flex gap-4 lg:gap-10 justify-center">
+          <div className="flex gap-4 lg:gap-10 justify-center lg:pr-3">
             {socialLinks.map((item, i) => (
               <a className="mt-4" key={i} href={item.link}>
                 <img className="w-[2rem]" src={item.icon} alt="" />

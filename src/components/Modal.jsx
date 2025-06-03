@@ -70,7 +70,7 @@ export function Modal({ open, onClose, children, className = '' }) {
             <div
               ref={modalRef}
               tabIndex={-1}
-              className="inset-0 z-100 flex justify-center items-start pointer-events-none relative place-self-center"
+              className=" fixed inset-0 z-100 flex justify-center items-start pointer-events-none lg:relative lg:place-self-center"
               onClick={onClose}
             >
               <div className="absolute hidden lg:block top-[-0.7rem] -right-2 z-[1000] pointer-events-auto">
@@ -87,7 +87,7 @@ export function Modal({ open, onClose, children, className = '' }) {
               <div
                 ref={contentRef}
                 className={`
-        pointer-events-auto pb-50 lg:pb-0 lg:place-self-center lg:px-8 relative
+        pointer-events-auto pb-50 lg:pb-5 lg:place-self-center lg:px-8 relative
         bg-white w-full shadow-lg
         transition-all duration-300 ease-out
         flex flex-col z-[200]
