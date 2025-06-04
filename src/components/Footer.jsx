@@ -53,7 +53,7 @@ export function Footer() {
             <div className="mt-7 mb-8 lg:mt-0 lg:mb-0 flex-col flex">
               <p className="text-[1.2rem] text-white font-[500] mb-2">Contact Us</p>
               {contact.map((item, i) => (
-                <span className="text-footerLink mb-2" key={i}>
+                <span className="text-footerLink mb-2 font-[500]" key={i}>
                   {i !== contact.length - 1 ? (
                     <>
                       {item.title}:{' '}
@@ -62,7 +62,7 @@ export function Footer() {
                       </a>
                     </>
                   ) : (
-                    <span>{item.id}</span>
+                    <span className="font-[500]">{item.id}</span>
                   )}
                 </span>
               ))}

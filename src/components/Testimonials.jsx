@@ -77,26 +77,24 @@ export function Testimonials() {
             ))}
           </Swiper>
         </div>
-        <div className="hidden lg:grid grid-cols-3 grid-rows-3 gap-6 pb-65">
-          <div className="row-span-3">
+        <div className="hidden lg:grid grid-cols-3 grid-rows-6 gap-6 pb-65 h-full">
+          <div className="row-span-6">
             <IntroCard />
           </div>
-          <div className="row-start-1 col-start-2">
+          <div className="row-start-1 col-start-2 row-span-2">
             <TestimonyCard data={fullList[1]} />
           </div>
-          <div className="row-start-2 col-start-2">
-            <TestimonyCard data={fullList[2]} />
+          <div className="row-start-3 col-start-2 row-span-2">
+            <TestimonyCard data={fullList[5]} />
           </div>
-          <div className="row-start-3 col-start-2">
+          <div className="row-start-5 col-start-2 row-span-2">
             <TestimonyCard data={fullList[3]} />
           </div>
-          <div className="row-span-3 col-start-3 flex flex-col h-full">
-            <div className="flex-1 flex">
-              <TestimonyCard data={fullList[4]} />
-            </div>
-            <div className="flex-1 flex mt-6">
-              <TestimonyCard data={fullList[5]} />
-            </div>
+          <div className="row-start-1 col-start-3 row-span-3">
+            <TestimonyCard data={fullList[4]} largeQuote />
+          </div>
+          <div className="row-start-4 col-start-3 row-span-3">
+            <TestimonyCard data={fullList[2]} largeQuote />
           </div>
         </div>
       </section>
