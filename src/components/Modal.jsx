@@ -91,10 +91,13 @@ export function Modal({ open, onClose, children, className = '' }) {
         bg-white w-full shadow-lg
         transition-all duration-300 ease-out
         flex flex-col z-[200]
-        overflow-x-hidden
+        overflow-x-hidden overflow-y-auto
+        h-[100vh] hide-scrollbar
         lg:w-[60vw] lg:h-[89vh]
         ${exiting ? 'animate-modal-out' : 'animate-modal-in'}
-        ${scrolled ? 'mt-0 rounded-none' : 'mt-[5vh] lg:mt-[0vh] lg:rounded-3xl'}
+        ${
+          scrolled ? 'mt-[0vh] rounded-none lg:rounded-3xl ' : 'mt-[5vh] lg:mt-[0vh] lg:rounded-3xl'
+        }
       `}
                 style={{
                   transform: scrolled ? 'translateY(0)' : 'translateY(10vh)',
