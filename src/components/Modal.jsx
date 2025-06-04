@@ -118,13 +118,13 @@ export function Modal({ open, onClose, children, className = '' }) {
                     <img src={cancel} alt="Close" className="w-5 h-5" />
                   </button>
                 </div>
-                <div className="w-full mt-6 flex justify-center items-center min-h-[17rem] lg:min-h-[28rem] xl:min-h-[19rem] lg:w-[100%] lg:mx-auto lg:mt-6">
+                <div className="w-[90%] mx-auto mt-10 flex justify-center items-center min-h-[17rem] lg:min-h-[28rem] xl:min-h-[19rem] lg:w-[100%] lg:mx-auto lg:mt-6">
                   <img
                     src={modalImg}
                     alt="modal background"
-                    className="h-full"
+                    className="h-full place-self-center"
                     loading="lazy"
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                   />
                 </div>
                 <div className="p-6 flex-1 flex flex-col">{children}</div>

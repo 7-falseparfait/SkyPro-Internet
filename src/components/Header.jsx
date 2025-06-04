@@ -42,11 +42,11 @@ export function Header() {
             className={`
     fixed right-0 left-auto
     top-[calc(theme(spacing.2)+theme(spacing.5))]
-    py-0 w-[90vw] h-[90vh] bg-white z-[101] rounded-l-2xl shadow-lg flex flex-col p-8
+    py-0 w-[90vw] h-[90vh] max-h-screen bg-white z-[101] rounded-l-2xl shadow-lg flex flex-col p-8
     transition-transform duration-300 ease-in-out lg:hidden
     ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
   `}
-            style={{ maxWidth: 400, top: 'calc(1rem + 1.25rem)' }}
+            style={{ maxWidth: 400 }}
           >
             <button
               className="absolute top-6 right-6 z-[102]"
@@ -55,8 +55,8 @@ export function Header() {
             >
               <img className="w-[40px]" src={cancel} alt="close" />
             </button>
-            <div className="flex flex-col justify-between items-center h-full w-full">
-              <div className="flex flex-col gap-10 mt-25 w-full">
+            <div className="flex-1 flex flex-col justify-between items-center relative overflow-y-auto w-full">
+              <div className="flex flex-col gap-6 mt-16 w-full">
                 {navLink.map((item, i) => (
                   <a
                     className="text-xl font-[500] text-blackText"
@@ -68,7 +68,7 @@ export function Header() {
                   </a>
                 ))}
               </div>
-              <div className="mb-4">
+              <div className="mb-4 w-full flex justify-center absolute bottom-0 left-0">
                 <img src={logo} alt="logo" className="mx-auto" />
               </div>
             </div>

@@ -4,7 +4,7 @@ export function TestimonyCard({ data, largeQuote = false }) {
   return (
     <div className="flex flex-col flex-shrink-0 py-4 px-4 border border-gray-300 rounded-[1rem] bg-white h-full w-full">
       <img
-        className={`w-[50px] lg:w-[70px] mt-3 ${largeQuote ? 'lg:w-[130px]' : ''}`}
+        className={`w-[40px] lg:w-[70px] mt-3 ${largeQuote ? 'lg:w-[130px]' : ''}`}
         src={qoute}
         alt="qoute"
       />
