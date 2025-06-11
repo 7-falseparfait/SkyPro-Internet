@@ -18,6 +18,7 @@ import homeIcon from '../assets/homeIcon.png';
 import contactIcon from '../assets/contactIcon.png';
 import speedIcon from '../assets/speedIcon.png';
 import wifiIcon from '../assets/wifiIcon.png';
+import heroBg from '../assets/hero-img.webp';
 
 // ...existing imports...
 export function Hero() {
@@ -32,7 +33,15 @@ export function Hero() {
   const baseIconClass = `lg:w-11 xl:w-13 absolute transition-all duration-800 ease-out hidden lg:block`;
 
   return (
-    <section className="py-3 text-center lg:py-18 lg:place-self-center lg:relative w-full">
+    <section
+      className="py-18 text-center lg:py-18 lg:place-self-center lg:relative w-full bg-cover"
+      style={{
+        backgroundImage: `url(${heroBg})`,
+        backgroundPosition: '55% 80%',
+        backgroundSize: window.innerWidth < 700 ? '240%' : '100%',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="lg:max-w-[1440px] lg:mx-auto relative container-padding">
         <Tags
           className="w-fit mx-auto px-2 mb-6 hidden lg:flex"
@@ -43,18 +52,22 @@ export function Hero() {
           Trusted By 10,000+ Customers <img className="w-4 h-4" src={arrow} alt="arrow-icon" />
         </Tags>
         <HeroHeading />
-        <p className="font-normal mt-2 lg:py-5">
-          Enjoy unlimited, high-speed wireless internet with seamless
-          <span className="hidden lg:inline">
-            <br />
-          </span>
-          coverage across Nigeria — no cables, no hassle.
+        <p className="font-bold leading-[150%] mt-4 lg:py-5 text-white ">
+          Enjoy unlimited, high-speed wireless internet with seamless coverage across Nigeria — no
+          cables, no hassle.
         </p>
-        <div className="mt-6 flex flex-col items-center gap-5 lg:flex-row lg:justify-center lg:mb-6">
-          <Button className="lg:w-[17rem]" onClick={() => navigate('/pricing')}>
+        <div className="mt-12 flex flex-col items-center gap-5 lg:flex-row lg:justify-center lg:mb-6">
+          <Button
+            className="lg:w-[17rem] bg-white font-[700] text-[1rem]"
+            onClick={() => navigate('/pricing')}
+          >
             Get Started
           </Button>
-          <Button className="lg:w-[17rem]" onClick={() => setModal(true)} variant="secondary">
+          <Button
+            className="lg:w-[17rem] font-[700] text-[1rem]"
+            onClick={() => setModal(true)}
+            variant="secondary"
+          >
             Learn More
           </Button>
         </div>

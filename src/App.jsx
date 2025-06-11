@@ -1,11 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Hero } from "./pages/Hero";
-import { Pricing } from "./pages/Pricing";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { Partners } from "./components/Partners";
-import { Testimonials } from "./components/Testimonials";
-import { GetStarted } from "./components/GetStarted";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Hero } from './pages/Hero';
+import { Pricing } from './pages/Pricing';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Partners } from './components/Partners';
+import { Testimonials } from './components/Testimonials';
+import { GetStarted } from './components/GetStarted';
+import { Serve } from './components/Serve';
+import { Faqs } from './components/Faqs';
 
 function App() {
   return (
@@ -17,8 +19,10 @@ function App() {
           element={
             <>
               <Hero />
-              <Partners />
+              <Serve />
               <Testimonials />
+              <Faqs />
+              <Partners />
               <GetStarted />
             </>
           }
@@ -27,9 +31,9 @@ function App() {
           path="/pricing"
           element={
             <>
-              {" "}
+              {' '}
               <Pricing />
-              <GetStarted />{" "}
+              <GetStarted />{' '}
             </>
           }
         />

@@ -198,3 +198,14 @@ h3 {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;    /* Firefox */
 }
+.faq-rect-animate {
+  transition: transform 0.3s, opacity 0.3s;
+}
+.faq-rect-animate.closed {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.faq-rect-animate.open {
+  transform: scaleY(0);
+  opacity: 0;
+}

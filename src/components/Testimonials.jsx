@@ -6,6 +6,7 @@ import { Tags } from './Tags';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import heroBg from '../assets/hero-img.webp';
 export function Testimonials() {
   const testimonies = [
     {
@@ -44,7 +45,7 @@ export function Testimonials() {
 
   return (
     <div>
-      <section className="mb-3 lg:max-w-[1440px] lg:mx-auto lg:px-10">
+      <section className="mb-3 lg:max-w-[1440px] lg:mx-auto lg:px-10 mt-10">
         <Tags
           className="mx-auto"
           icon={
@@ -96,6 +97,19 @@ export function Testimonials() {
           <div className="row-start-4 col-start-3 row-span-3">
             <TestimonyCard data={fullList[2]} largeQuote />
           </div>
+        </div>
+        <div
+          className="mt-7 py-30 container-padding"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundPosition: 'center center',
+            backgroundSize: '100%',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <p className="text-white font-[500] leading-[150%] text-[1rem] w-full text-center">
+            “Stay connected to what matters most — fast, seamless, everywhere.”
+          </p>
         </div>
       </section>
     </div>

@@ -41,10 +41,11 @@ export function Header() {
           <nav
             className={`
     fixed right-0 left-auto
-    top-[calc(theme(spacing.2)+theme(spacing.5))]
-    py-0 w-[90vw] h-[90vh] max-h-screen bg-white z-[101] rounded-l-2xl shadow-lg flex flex-col p-8
+    top-1/2
+    w-[90vw] max-w-[400px] bg-white z-[101] rounded-l-2xl shadow-lg flex flex-col p-8
     transition-transform duration-300 ease-in-out lg:hidden
-    ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
+    ${menuOpen ? 'translate-x-0 -translate-y-1/2' : 'translate-x-full -translate-y-1/2'}
+    h-[90vh]
   `}
             style={{ maxWidth: 400 }}
           >
@@ -56,7 +57,7 @@ export function Header() {
               <img className="w-[40px]" src={cancel} alt="close" />
             </button>
             <div className="flex-1 flex flex-col justify-between items-center relative overflow-y-auto w-full">
-              <div className="flex flex-col gap-6 mt-16 w-full">
+              <div className="flex flex-col gap-6 mt-22 w-full">
                 {navLink.map((item, i) => (
                   <a
                     className="text-xl font-[500] text-blackText"
