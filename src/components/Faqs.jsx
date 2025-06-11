@@ -44,7 +44,7 @@ export function Faqs() {
     setOpenIndex(index === openIndex ? null : index);
   }
   return (
-    <section className="mt-7">
+    <section className="mt-10 py-4">
       <div className="lg:max-w-[1440px] mx-auto container-padding">
         <Tags
           className="mx-auto"

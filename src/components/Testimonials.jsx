@@ -45,7 +45,7 @@ export function Testimonials() {
 
   return (
     <div>
-      <section className="mb-3 lg:max-w-[1440px] lg:mx-auto lg:px-10 mt-10">
+      <section className="lg:max-w-[1440px] lg:mx-auto lg:px-10 mt-10 py-4">
         <Tags
           className="mx-auto"
           icon={

@@ -19,7 +19,7 @@ const solutions = [
 ];
 export function Serve() {
   return (
-    <section className="py-4 mt-6 pb-7 mb-10">
+    <section className="py-4 mt-10">
       <div className="lg:max-w-[1440px] mx-auto container-padding">
         <Tags
           className="mx-auto"
