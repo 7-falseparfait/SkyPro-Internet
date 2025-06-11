@@ -8,7 +8,7 @@ export function GetStarted() {
           <h3 className="mt-6 text-white text-[2rem] leading-[120%]">
             Get Started with
             <br className="hidden lg:block" />
-            <span className="font-[800] leading-snug"> SkyPro</span> Today
+            <span className="font-[800] leading-snug"> SkyPro Internet</span> Today
           </h3>
 
           <p className="mt-3 text-getStartedText">

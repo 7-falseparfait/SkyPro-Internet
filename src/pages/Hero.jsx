@@ -53,8 +53,8 @@ export function Hero() {
         </Tags>
         <HeroHeading />
         <p className="font-bold leading-[150%] mt-4 lg:py-5 text-white ">
-          Enjoy unlimited, high-speed wireless internet with seamless coverage across Nigeria — no
-          cables, no hassle.
+          Enjoy unlimited, high-speed wireless internet with seamless coverage across Nigeria — No
+          hassle.
         </p>
         <div className="mt-12 flex flex-col items-center gap-5 lg:flex-row lg:justify-center lg:mb-6">
           <Button

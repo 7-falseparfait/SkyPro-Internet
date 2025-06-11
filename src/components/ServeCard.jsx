@@ -5,7 +5,7 @@ export function ServeCard({ title, description, className = '', img }) {
         <img className="object-cover w-full rounded-[0.3rem] h-full" src={img} alt={img} />
       </div>
       <div>
-        <h2 className="mt-4 text-blackText text-2xl text-left">{title}</h2>
+        <h2 className="mt-4 text-blackText text-2xl text-left text-[1.23rem]">{title}</h2>
         <p className="leading-[120px]">{description}</p>
       </div>
     </div>

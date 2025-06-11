@@ -107,7 +107,7 @@ export function Testimonials() {
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <p className="text-white font-[500] leading-[150%] text-[1rem] w-full text-center">
+          <p className="text-white font-[500] leading-[150%] text-[1.3rem] w-full text-center">
             “Stay connected to what matters most — fast, seamless, everywhere.”
           </p>
         </div>

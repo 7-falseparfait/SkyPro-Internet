@@ -14,15 +14,15 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="flex py-2 lg:py-6 lg:border-b-1 border-b-gray-border lg:mx-0 relative z-50">
-      <div className="lg:max-w-[1440px] lg:mx-auto justify-between items-center py-5 flex w-full container-padding">
-        <p>LOGO</p>
+    <header className="flex py-0 lg:py-6 lg:border-b-1 border-b-gray-border lg:mx-0 relative z-50">
+      <div className=" lg:max-w-[1440px] lg:mx-auto justify-between items-center py-3 flex w-full container-padding">
+        <img src={logo} alt="" />
         <button
           className="lg:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
         >
-          <img className="w-[40px]" src={menuOpen ? cancel : harmbuger} alt="menu" />
+          <img className="w-[25px]" src={menuOpen ? cancel : harmbuger} alt="menu" />
         </button>
         <div className="hidden lg:flex gap-4">
           {navLink.map((item, i) => (
@@ -54,7 +54,7 @@ export function Header() {
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
-              <img className="w-[40px]" src={cancel} alt="close" />
+              <img className="w-[25px]" src={cancel} alt="close" />
             </button>
             <div className="flex-1 flex flex-col justify-between items-center relative overflow-y-auto w-full">
               <div className="flex flex-col gap-6 mt-22 w-full">

@@ -22,7 +22,7 @@ export function PricingCard({
       <h2 className={`${highlight ? 'text-white' : 'text-blackText'} custom-h2`}>{title}</h2>
       <p className="text-[1.1rem] mt-3 text-center">{speed}</p>
       <div className="py-6">
-        <h1 className={`${highlight ? 'text-white' : 'text-primary'} custom-h1`}>
+        <h1 className={`text-center  ${highlight ? 'text-white' : 'text-primary'} custom-h1`}>
           ₦{price.toLocaleString()}
         </h1>
         <p className="text-[1rem] text-center font-campton">/month</p>
