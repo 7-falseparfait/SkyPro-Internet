@@ -61,15 +61,15 @@ export function Faqs() {
             Frequently asked questions and everything you need to know about SkyPro Internet. Can’t
             find the answer you are looking for? <span>Contact Us</span>
           </p>
-          <div className="flex flex-col gap-4 mt-9">
+          <div className="flex flex-col gap-4 lg:gap-6 mt-9">
             {FAQs.map((faq, index) => (
               <div
-                className="p-4 cursor-pointer border-1 border-gray-300 rounded-[0.3rem] "
+                className="px-4 py-7 cursor-pointer border-[0.5px] border-gray-200 rounded-[0.3rem] "
                 key={index}
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex items-center justify-between">
-                  <h4 className="text-[#121212] font-[700] text-[0.9rem] leading-[21px]">
+                  <h4 className="text-[#121212] font-[700] text-[0.9rem] lg:text-[1.3rem] leading-[21px]">
                     {faq.question}
                   </h4>
                   <span className="transition-transform duration-300">
@@ -94,22 +94,11 @@ export function Faqs() {
                   </span>
                 </div>
                 <div className="w-[90%]">
-                  <div
-                    className={`
-      transition-all duration-100 ease-in-out overflow-hidden
-      ${
-        openIndex === index
-          ? 'opacity-100 max-h-40 translate-y-0'
-          : 'opacity-0 max-h-0 -translate-y-2'
-      }
-    `}
-                  >
-                    {openIndex === index && (
-                      <p className="text-left text-[0.9rem] text-black leading-[150%] mt-6">
-                        {faq.answer}
-                      </p>
-                    )}
-                  </div>
+                  {openIndex === index && (
+                    <p className="text-left text-[0.9rem] text-black leading-[150%] mt-6">
+                      {faq.answer}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}

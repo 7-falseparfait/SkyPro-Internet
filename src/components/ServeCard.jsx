@@ -1,6 +1,6 @@
 export function ServeCard({ title, description, className = '', img }) {
   return (
-    <div className={` p-3 ${className} border-1 border-gray-300 rounded-[0.5rem] `}>
+    <div className={` p-3 ${className} border-[0.5px] border-gray-200 rounded-[0.5rem] `}>
       <div className=" h-[16rem] md:h-[23rem]">
         <img className="object-cover w-full rounded-[0.3rem] h-full" src={img} alt={img} />
       </div>

@@ -78,7 +78,7 @@ export function Testimonials() {
             ))}
           </Swiper>
         </div>
-        <div className="hidden lg:grid grid-cols-3 grid-rows-6 gap-6 pb-65 h-full">
+        <div className="hidden lg:grid grid-cols-3 grid-rows-6 gap-6 h-full">
           <div className="row-span-6">
             <IntroCard />
           </div>
@@ -98,20 +98,22 @@ export function Testimonials() {
             <TestimonyCard data={fullList[2]} largeQuote />
           </div>
         </div>
-        <div
-          className="mt-7 py-30 container-padding"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            backgroundPosition: 'center center',
-            backgroundSize: '100%',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
-          <p className="text-white font-[500] leading-[150%] text-[1.3rem] w-full text-center">
-            “Stay connected to what matters most — fast, seamless, everywhere.”
-          </p>
-        </div>
       </section>
+      <div
+        className="mt-7 py-30 lg:py-70 container-padding"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundPosition: 'center center',
+          backgroundSize: '100%',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <p className="text-white font-[500] leading-[150%] text-[1.3rem] lg:!text-[2.6rem] w-full text-center lg:max-w-[1440px] lg:mx-auto">
+          “Stay connected to what matters most — fast, seamless,
+          <br className="hidden lg:inline" />
+          everywhere.”
+        </p>
+      </div>
     </div>
   );
 }

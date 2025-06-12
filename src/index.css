@@ -63,7 +63,7 @@ p {
 }
 h1 {
   @apply text-[2.1rem] font-black leading-[3.1rem];
-  @apply lg:text-[5.1rem] lg:leading-[5rem];
+  @apply lg:text-[5rem] lg:leading-[5rem];
   /* color: var(--color-blackText); */
 }
 

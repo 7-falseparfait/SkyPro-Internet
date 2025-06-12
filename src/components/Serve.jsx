@@ -39,7 +39,7 @@ export function Serve() {
             the seamless internet experience you need, wherever you are.
           </p>
         </div>
-        <div className="flex flex-col gap-7">
+        <div className="flex flex-col gap-7 lg:flex lg:flex-row lg:justify-between">
           {solutions.map((solution, i) => (
             <ServeCard key={i} {...solution} />
           ))}

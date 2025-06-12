@@ -2,7 +2,7 @@ import qoute from '/src/assets/qoute.svg';
 
 export function TestimonyCard({ data, largeQuote = false }) {
   return (
-    <div className="flex flex-col flex-shrink-0 py-4 px-4 border border-gray-300 rounded-[1rem] bg-white h-full w-full">
+    <div className="flex flex-col flex-shrink-0 py-4 px-4 border-[0.5px] border-gray-200 rounded-[1rem] bg-white h-full w-full">
       <img
         className={`w-[40px] lg:w-[70px] mt-3 ${largeQuote ? 'lg:w-[130px]' : ''}`}
         src={qoute}

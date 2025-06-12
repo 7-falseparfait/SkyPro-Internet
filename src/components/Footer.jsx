@@ -1,7 +1,6 @@
 import FBicon from '/src/assets/fbicon.png';
 import linkIcon from '/src/assets/linkedin.png';
 import XIcon from '/src/assets/Twitter.png';
-import Logo from '/src/assets/footer-logo.svg';
 
 export function Footer() {
   const footerLinks = [
@@ -28,7 +27,7 @@ export function Footer() {
     <div>
       <footer className=" bg-footerBg section-spacing lg:pt-65 lg:max-w-[1440px] lg:mx-auto container-padding">
         <div className="lg:flex">
-          <div className="mt-10 lg:w-[40%] relative w-[100%] place-items-center">
+          <div className="mt-10 lg:mt-0 lg:w-[40%] w-full flex justify-center items-center">
             <svg
               className="h-[10rem]"
               width="280"

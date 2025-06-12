@@ -1,4 +1,4 @@
-import group from "/src/assets/group.webp";
+import group from '/src/assets/group.webp';
 
 export function IntroCard() {
   return (
@@ -9,7 +9,7 @@ export function IntroCard() {
           src={group}
           alt="Group of customers"
         />
-        <h2 className="text-white mt-2">Over 10 thousand</h2>
+        <h2 className="text-white mt-2">Over 1 thousand</h2>
         <span className="text-white text-center text-[0.8rem] lg:text-[1.2rem]">
           Happy Customers
         </span>
