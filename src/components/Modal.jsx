@@ -1,8 +1,8 @@
 import { useRef, useEffect, useState } from 'react';
-import modalImg from '/src/assets/InnerBG.webp';
+
 import cancel from '/src/assets/cancel.png';
 
-export function Modal({ open, onClose, children, className = '' }) {
+export function Modal({ open, onClose, children, className = '', img = '' }) {
   const modalRef = useRef();
   const contentRef = useRef();
   const [show, setShow] = useState(open);
@@ -118,16 +118,18 @@ export function Modal({ open, onClose, children, className = '' }) {
                     <img src={cancel} alt="Close" className="w-5 h-5" />
                   </button>
                 </div>
-                <div className="w-[90%] mx-auto mt-10 flex justify-center items-center min-h-[17rem] lg:min-h-[28rem] xl:min-h-[19rem] lg:w-[100%] lg:mx-auto lg:mt-6">
-                  <img
-                    src={modalImg}
-                    alt="modal background"
-                    className="h-full place-self-center"
-                    loading="lazy"
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-                <div className="p-6 flex-1 flex flex-col">{children}</div>
+                {img && (
+                  <div className="w-[90%] mx-auto mt-10 flex justify-center items-center min-h-[17rem] lg:min-h-[28rem] xl:min-h-[19rem] lg:w-[100%] lg:mx-auto lg:mt-6">
+                    <img
+                      src={img}
+                      alt="modal background"
+                      className="h-full place-self-center"
+                      loading="lazy"
+                      style={{ objectFit: 'contain' }}
+                    />
+                  </div>
+                )}
+                <div className=" p-3 flex-1 flex flex-col">{children}</div>
               </div>
             </div>
           )}

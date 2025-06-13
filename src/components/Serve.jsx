@@ -31,7 +31,7 @@ export function Serve() {
           Who we serve
         </Tags>
         <div className="text-center section-spacing">
-          <h2 className="mt-6 text-blackText text-2xl">
+          <h2 className="mt-6 lg:mt-1 text-blackText text-2xl">
             Tailored Internet Solutions for Every User
           </h2>
           <p className="mt-3 mx-auto text-center">

@@ -55,7 +55,7 @@ export function Testimonials() {
           Testimonials
         </Tags>
         <div className="text-center section-spacing">
-          <h2 className="mt-6 text-blackText text-2xl">Trusted by Leading Companies</h2>
+          <h2 className="mt-6 lg:mt-1 text-blackText text-2xl">Trusted by Leading Companies</h2>
           <p className="mt-3 mx-auto text-center">
             Hear from our satisfied customers who have transformed their businesses with SkyPro.
           </p>
@@ -100,18 +100,17 @@ export function Testimonials() {
         </div>
       </section>
       <div
-        className="mt-7 py-30 lg:py-70 container-padding"
+        className="mt-7 py-30 lg:py-55 container-padding"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundPosition: 'center center',
+          backgroundPosition: 'center 60%',
           backgroundSize: '100%',
           backgroundRepeat: 'no-repeat',
         }}
       >
         <p className="text-white font-[500] leading-[150%] text-[1.3rem] lg:!text-[2.6rem] w-full text-center lg:max-w-[1440px] lg:mx-auto">
-          “Stay connected to what matters most — fast, seamless,
-          <br className="hidden lg:inline" />
-          everywhere.”
+          “Stay connected to what matters most — fast and <br className="hidden lg:inline" />
+          seamless.”
         </p>
       </div>
     </div>

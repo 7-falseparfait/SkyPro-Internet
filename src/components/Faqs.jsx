@@ -56,7 +56,7 @@ export function Faqs() {
           FAQs
         </Tags>
         <div className="text-center section-spacing">
-          <h2 className="mt-6 text-blackText text-2xl">Frequently asked questions</h2>
+          <h2 className="mt-6 lg:mt-1 text-blackText text-2xl">Frequently asked questions</h2>
           <p className="mt-3 mx-auto text-center">
             Frequently asked questions and everything you need to know about SkyPro Internet. Can’t
             find the answer you are looking for? <span>Contact Us</span>
@@ -64,7 +64,7 @@ export function Faqs() {
           <div className="flex flex-col gap-4 lg:gap-6 mt-9">
             {FAQs.map((faq, index) => (
               <div
-                className="px-4 py-7 cursor-pointer border-[0.5px] border-gray-200 rounded-[0.3rem] "
+                className="px-4 py-4 lg:py-7  cursor-pointer border-[0.5px] border-gray-200 rounded-[0.3rem] "
                 key={index}
                 onClick={() => toggleFAQ(index)}
               >

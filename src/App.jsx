@@ -8,6 +8,7 @@ import { Testimonials } from './components/Testimonials';
 import { GetStarted } from './components/GetStarted';
 import { Serve } from './components/Serve';
 import { Faqs } from './components/Faqs';
+import { Coverage } from './components/Coverage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <>
               <Hero />
               <Serve />
+              <Coverage />
               <Testimonials />
               <Faqs />
               <Partners />

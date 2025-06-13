@@ -5,11 +5,9 @@ import { Modal } from '../components/Modal';
 import { StepList } from '../components/StepList';
 import { steps } from '../data/steps';
 import { HeroHeading } from '../components/HeroHeading';
-import { Tags } from '../components/Tags';
-
 import heroBg from '../assets/hero-img.webp';
+import modalImg from '/src/assets/InnerBG.webp';
 
-// ...existing imports...
 export function Hero() {
   const navigate = useNavigate();
   const [showModal, setModal] = useState(false);
@@ -46,7 +44,7 @@ export function Hero() {
             Learn More
           </Button>
         </div>
-        <Modal className="mx-0" open={showModal} onClose={() => setModal(false)}>
+        <Modal className="mx-0" open={showModal} img={modalImg} onClose={() => setModal(false)}>
           <h2 className="text-xl font-black mb-4 text-left text-very-black">
             GETTING STARTED WITH SKYPRO
           </h2>

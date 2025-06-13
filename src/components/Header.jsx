@@ -14,7 +14,7 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="flex  py-0 lg:py-1 lg:border-b-1 border-b-gray-border  relative z-50">
+    <header className="sticky top-0 bg-white flex py-0 lg:py-1 lg:border-b-1 border-b-gray-border z-50">
       <div className=" justify-between items-center py-3 flex w-full lg:py-0 container-padding lg:max-w-[1440px] lg:mx-auto">
         <img className="lg:w-[14rem]" src={logo} alt="" />
         <button
