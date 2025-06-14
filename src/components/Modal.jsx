@@ -106,11 +106,11 @@ export function Modal({ open, onClose, children, className = '', img = '' }) {
                 onClick={e => e.stopPropagation()}
               >
                 <div
-                  className="absolute z- top-2 right-2 lg:hidden"
+                  className="absolute z- top-2 right-3 lg:hidden"
                   style={{ pointerEvents: 'auto' }}
                 >
                   <button
-                    className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-50 hover:bg-gray-100 hover:cursor-pointer transition-all"
+                    className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 hover:bg-gray-100 hover:cursor-pointer transition-all"
                     onClick={onClose}
                     aria-label="Close"
                     style={{ pointerEvents: 'auto' }}

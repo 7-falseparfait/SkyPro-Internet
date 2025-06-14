@@ -12,7 +12,7 @@ export function Coverage() {
         <div className="w-full">
           <img className="object-contain" src={map} alt="map" />
         </div>
-        <div>
+        <div className="w-full mx-auto flex flex-col items-center">
           <h1 className="!font-[800] !text-[3rem] place-self-center text-black">Our Reach</h1>
           <div className="my-8 text-[0.870rem] flex justify-between reach w-[80%] place-self-center">
             <div className="flex flex-col gap-6 text-left">
@@ -38,7 +38,7 @@ export function Coverage() {
           </div>
           <div className="w-full flex justify-center">
             <Button
-              className="font-[700] text-[1.2rem] w-[70%] mx-auto"
+              className="font-[700] text-[1rem] w-[70%] mx-auto"
               variant="coverage"
               onClick={() => setModal(true)}
             >
